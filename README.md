@@ -1,12 +1,65 @@
-# React + Vite
+# 🚀 Role-Based Login & Dashboard System (React + Redux)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **frontend interview assessment** for FinoBytes.  
+It implements a **role-based authentication and dashboard system** using **React, Redux, and React Router**, with **mock authentication** (no real backend).  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
+🔗 [Live Demo](https://role-based-dashboard-eta.vercel.app/)  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Features
+- 🔑 **Role-Based Login & Registration**
+  - Admin: Email + Password  
+  - Merchant: Store Details + Password  
+  - Member: Phone/Email + Password (or OTP simulation)  
+- 🔒 **Protected Routes**
+  - `/dashboard/admin` → Admin only  
+  - `/dashboard/merchant` → Merchant only  
+  - `/dashboard/member` → Member only  
+- 🗄️ **Redux State Management**
+  - Auth state (token + role)  
+  - Dummy dashboard data (users, purchases, points, etc.)  
+- 🎨 **UI/UX**
+  - Clean design using **TailwindCSS / Material-UI**  
+  - Simple forms with validation  
+  - Dummy loaders where applicable  
+
+---
+
+## 📂 Pages Overview
+### Authentication
+-  Admin login (Email + Password)  
+-  Merchant login (Store Details + Password)  
+-  → Member login (Phone/Email + Password or OTP)  
+
+### Dashboards
+- `/dashboard/admin` → Manage Users & Merchants (dummy table data)  
+- `/dashboard/merchant` →  
+  - Approve Purchases (table with approve button)  
+  - Lookup Customer (search bar + dummy results)  
+  - Set Contribution Rate (form with number input)  
+  - Notifications (list of approval requests)  
+- `/dashboard/member` → Points Summary (dummy points overview)  
+
+---
+
+## ⚙️ Tech Stack
+- **React** – UI library  
+- **Redux Toolkit** – State management  
+- **React Router v6** – Routing & protected routes  
+- **TailwindCSS / Material-UI** – Styling  
+- **LocalStorage** – Fake tokens for mock authentication  
+
+---
+
+## 🚦 Getting Started
+
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/Sifat-Ikram/role-based-dashboard.git
+cd role-based-dashboard
+npm install
+npm run dev
