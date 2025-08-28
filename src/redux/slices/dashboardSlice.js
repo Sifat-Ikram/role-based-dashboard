@@ -20,7 +20,6 @@ const dashboardSlice = createSlice({
   name: "dashboard",
   initialState,
   reducers: {
-    // Admin reducers
     addUser: (state, action) => {
       state.admin.users.push(action.payload);
     },
@@ -29,8 +28,14 @@ const dashboardSlice = createSlice({
         (user) => user.id !== action.payload
       );
     },
-
-    // Merchant reducers
+    addMerchant: (state, action) => {
+      state.admin.merchants.push(action.payload);
+    },
+    removeMerchant: (state, action) => {
+      state.admin.merchants = state.admin.merchants.filter(
+        (merchant) => merchant.id !== action.payload
+      );
+    },
     approvePurchase: (state, action) => {
       const id = action.payload;
       const purchaseIndex = state.merchant.purchases.findIndex(
@@ -44,8 +49,6 @@ const dashboardSlice = createSlice({
     setContributionRate: (state, action) => {
       state.merchant.contributionRate = action.payload;
     },
-
-    // Member reducers (if needed in future)
     updatePoints: (state, action) => {
       state.member.pointsSummary = {
         ...state.member.pointsSummary,
@@ -58,6 +61,8 @@ const dashboardSlice = createSlice({
 export const {
   addUser,
   removeUser,
+  addMerchant,
+  removeMerchant,
   approvePurchase,
   setContributionRate,
   updatePoints,

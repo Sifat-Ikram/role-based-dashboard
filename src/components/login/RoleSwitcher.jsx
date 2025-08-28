@@ -7,7 +7,7 @@ export default function RoleSwitcher({ role, setRole }) {
     }`;
 
   return (
-    <div className="flex justify-center gap-3 mb-6">
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
       <button onClick={() => setRole("admin")} className={btnClass("admin")}>
         Admin
       </button>
