@@ -1,0 +1,41 @@
+{
+  "adminData": {
+    "users": [
+      { "id": 1, "name": "John Doe", "email": "john.doe@example.com" },
+      { "id": 2, "name": "Jane Smith", "email": "jane.smith@example.com" },
+      { "id": 3, "name": "Alice Johnson", "email": "alice.johnson@example.com" },
+      { "id": 4, "name": "Bob Williams", "email": "bob.williams@example.com" },
+      { "id": 5, "name": "Charlie Brown", "email": "charlie.brown@example.com" }
+    ],
+    "merchants": [
+      { "id": 1, "name": "Store One", "email": "store1@example.com", "role": "Merchant" },
+      { "id": 2, "name": "Store Two", "email": "store2@example.com", "role": "Merchant" },
+      { "id": 3, "name": "Store Three", "email": "store3@example.com", "role": "Merchant" },
+      { "id": 4, "name": "Store Four", "email": "store4@example.com", "role": "Merchant" },
+      { "id": 5, "name": "Store Five", "email": "store5@example.com", "role": "Merchant" }
+    ]
+  },
+  "merchantData": {
+    "purchases": [
+      { "id": 1, "customer": "John Doe", "amount": 50 },
+      { "id": 2, "customer": "Jane Smith", "amount": 80 },
+      { "id": 3, "customer": "Alice Johnson", "amount": 30 },
+      { "id": 4, "customer": "Bob Williams", "amount": 120 },
+      { "id": 5, "customer": "Charlie Brown", "amount": 60 }
+    ],
+    "notifications": [
+      "Approval request from John Doe",
+      "Approval request from Jane Smith",
+      "Approval request from Alice Johnson",
+      "Approval request from Bob Williams",
+      "Approval request from Charlie Brown"
+    ]
+  },
+  "memberData": {
+    "pointsSummary": {
+      "totalPoints": 1200,
+      "redeemed": 300,
+      "available": 900
+    }
+  }
+}
