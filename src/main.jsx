@@ -6,6 +6,8 @@ import App from "./App.jsx";
 import Register from "./components/pages/Register.jsx";
 import { Provider } from "react-redux";
 import store from "./redux/store.js";
+import Dashboard from "./components/pages/Dashboard.jsx";
+import NotFound from "./components/pages/NotFound.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +17,14 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register />,
+  },
+  {
+    path: "/dashboard/*",
+    element: <Dashboard />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 
